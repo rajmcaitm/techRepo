@@ -1,4 +1,4 @@
 FROM openjdk:8
 EXPOSE 8080
-ADD target/springbootcrudwithsplunkintegration.jar springbootcrudwithsplunkintegration.jar
-ENTRYPOINT ["java","-jar","/springbootcrudwithsplunkintegration.jar"]
+ADD target/SpringBootCRUDWithSplunkIntegration-1.0.0.jar SpringBootCRUDWithSplunkIntegration-1.0.0.jar
+ENTRYPOINT ["java","-jar","/SpringBootCRUDWithSplunkIntegration-1.0.0.jar"]
