@@ -45,6 +45,7 @@
           uses: actions/setup-java@v2
           with:
             java-version: '11'
+            distribution: 'adopt'
 
         - name: Run integration tests
           run: mvn verify
@@ -61,6 +62,7 @@
           uses: actions/setup-java@v2
           with:
               java-version: '11'
+              distribution: 'adopt'
 
         - name: Deploy to production
           run: echo "Deploying to production"
