@@ -25,6 +25,9 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
   test:
+    runs-on: ubuntu-latest
+    needs: build
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -33,10 +36,19 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
-          distribution: 'adopt'
 
       - name: Run tests
         run: mvn test
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to production
+        run: echo "Deploying to production"
 
 
       - name: Build & push Docker image
