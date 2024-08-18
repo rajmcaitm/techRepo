@@ -18,6 +18,11 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    @GetMapping("/hello")
+    public String helloWorld() {
+        return "Hello, World!";
+    }
+
     @GetMapping
     public List<Product> findAll() {
         logger.info("started hiting the findall api from controller");
