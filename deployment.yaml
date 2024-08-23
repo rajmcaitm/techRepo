@@ -18,7 +18,7 @@ spec:
         ports:
         - containerPort: 9999
       imagePullSecrets:
-      - name: Docker12345@
+      - name: my-docker-hub-credentials
   strategy:
     type: RollingUpdate
     rollingUpdate:
