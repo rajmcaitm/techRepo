@@ -19,13 +19,13 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t my-spring-boot-dharya .'
+                sh 'docker build -t SpringBootCRUDWithSplunkIntegration-2.0.0 .'
             }
         }
         stage('Push Docker Image') {
             steps {
-                sh 'docker tag my-spring-boot-dharya:latest rajmcaitm/my-spring-boot-dharya:latest'
-                sh 'docker push rajmcaitm/my-spring-boot-dharya:latest'
+                sh 'docker tag SpringBootCRUDWithSplunkIntegration-2.0.0:latest rajmcaitm/SpringBootCRUDWithSplunkIntegration-2.0.0:latest'
+                sh 'docker push rajmcaitm/SpringBootCRUDWithSplunkIntegration-2.0.0:latest'
             }
         }
         stage('Deploy to Production') {

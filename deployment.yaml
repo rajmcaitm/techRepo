@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-spring-boot-dharya
+  name: springbootcrudwithsplunkintegration
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: my-spring-boot-dharya
+      app: springbootcrudwithsplunkintegration
   template:
     metadata:
       labels:
-        app: my-spring-boot-dharya
+        app: springbootcrudwithsplunkintegration
     spec:
       containers:
-      - name: my-spring-boot-dharya
-        image: rajmcaitm/my-spring-boot-dharya:latest
+      - name: springbootcrudwithsplunkintegration
+        image: rajmcaitm/springbootcrudwithsplunkintegration:latest
         ports:
         - containerPort: 9999
       imagePullSecrets:
