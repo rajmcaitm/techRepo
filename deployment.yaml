@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-spring-boot-dharya
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: my-spring-boot-dharya
+  template:
+    metadata:
+      labels:
+        app: my-spring-boot-dharya
+    spec:
+      containers:
+      - name: my-spring-boot-dharya
+        image: rajmcaitm/my-spring-boot-dharya:latest
+        ports:
+        - containerPort: 9999
+      imagePullSecrets:
+      - name: Docker12345@
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
