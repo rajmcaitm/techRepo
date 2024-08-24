@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springbootcrudwithsplunkintegration
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: springbootcrudwithsplunkintegration
+  template:
+    metadata:
+      labels:
+        app: springbootcrudwithsplunkintegration
+    spec:
+      containers:
+      - name: springbootcrudwithsplunkintegration
+        image: rajmcaitm/springbootcrudwithsplunkintegration:latest
+        ports:
+        - containerPort: 9999
+      imagePullSecrets:
+      - name: my-docker-hub-credentials
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
