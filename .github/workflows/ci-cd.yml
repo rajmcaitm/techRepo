@@ -74,6 +74,6 @@
               distribution: 'adopt'
 
         - name: Deploy to production
-          #run: echo "Deploying to production"
+          run: echo "Deploying to production"
            #run: sh 'kubectl apply -f deployment.yaml'
 
