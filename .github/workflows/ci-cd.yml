@@ -75,5 +75,5 @@
 
         - name: Deploy to production
           #run: echo "Deploying to production"
-          run: kubectl apply -f deployment.yaml
+          #run: kubectl --kubeconfig=${{ secrets.KUBECONFIG }} apply -f deployment.yaml
 
