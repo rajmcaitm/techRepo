@@ -9,5 +9,4 @@ public class SpringBootCrudWithSplunkIntegrationApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootCrudWithSplunkIntegrationApplication.class, args);
 	}
-
 }
